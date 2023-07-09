@@ -27,7 +27,7 @@ The primary way to install and run the Studio is from a PhysiCell root directory
 ~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py
 
 # optionally, specify the name of the executable model for the Run tab:
-~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py -e <name-of-executable-model>
+~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py -e virus-sample
 ```
 Note:
 * there are ways to create an alias and/or a symbolic link to shorten this command, depending on your operating system
@@ -42,13 +42,19 @@ Note:
 [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] 
 
 ---
-## Menu: File -> Samples
+## Sample model: virus-macrophage
 
-We load a PhysiCell sample model, the virus-macrophage, to illustrate the contents of the tabs. 
+We will illustrate the Studio using the PhysiCell virus-macrophage model, i.e., we assume you have created
+this model:
+```
+~/PhysiCell$ make reset
+~/PhysiCell$ make virus-macrophage-sample
+~/PhysiCell$ make 
 
-## NOTE: the model (.xml) being loaded from the Studio's `/config` folder has been "flattened". The Studio cannot properly parse a legacy "hierarchical" .xml from PhysiCell where a `cell_definition` may refer to a "parent" in its attributes.
-
-<img src="./images/menu_file_sample_virus.png" width="30%">
+# Note that the config/PhysiCell_settings.xml for the virus-macrophage-sample uses a hierarchical format
+# in PhysiCell 1.12.0. The Studio requires a "flattened" format, therefore we provide one using the -c argument:
+~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py -e virus-sample -c PhysiCell-Studio-2.26.5/config/virus_macrophage.xml 
+```
 
 ---
 ## Config Basics
