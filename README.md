@@ -26,11 +26,11 @@ The primary way to install and run the Studio is from a PhysiCell root directory
 ~/PhysiCell$ unzip PhysiCell-Studio-2.26.5.zip
 ~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py
 
-# optionally, specify the name of the executable model for the Run tab:
-~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py -e virus-sample
+# optionally, you can specify the name of the executable model and its config (.xml) file via command line arguments, rf.:
+~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py --help
 ```
 Note:
-* there are ways to create an alias and/or a symbolic link to shorten this command, depending on your operating system
+* there are ways to create an alias and/or a symbolic link to make it easier to run the Studio
 * you may need to prefix your executable name with `./`, depending on your PATH environment variable
 * when you File->Save or Run the model, the configuration file (.xml) will be updated. If you want to retain your original .xml, you should make a copy
 ---
