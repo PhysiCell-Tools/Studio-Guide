@@ -3,8 +3,6 @@
 [[full images](README.md)]
 [[small images](README-small-images.md)]
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
-
 PhysiCell Studio is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
 This document tries to provide brief, but sufficient, guidance on using the Studio - at least its contents (not the challenges involved in developing your particular model). If you experience problems or have questions, please contact us using an appropriate PhysiCell community Slack channel or the Issues section of this GitHub repository. The latter is preferred when reporting a fatal error using the Studio. We also welcome Pull Requests in the Studio's repository (see instructions there) for bug fixes and suggested improvements.
@@ -54,12 +52,12 @@ We load a PhysiCell sample model, the virus-macrophage, to illustrate the conten
 
 ## NOTE: the model (.xml) being loaded from the Studio's `/config` folder has been "flattened". The Studio cannot properly parse a legacy "hierarchical" .xml from PhysiCell where a `cell_definition` may refer to a "parent" in its attributes.
 
-<img src="./images/menu_file_sample_virus.png" width="30%">
+<img src="./images/menu_file_sample_virus.png" width="10%">
 
 ---
 ## Config Basics
 
-<img src="./images/config_virus.png" width="100%">
+<img src="./images/config_virus.png" width="20%">
 
 
 * === Domain ===
@@ -82,7 +80,8 @@ We load a PhysiCell sample model, the virus-macrophage, to illustrate the conten
 ---
 ## Microenvironment
 
-<img src="./images/microenv_virus.png" width="100%">
+<img src="./images/microenv_virus.png" width="20%">
+
 * Define the substrates (or signals) used in the model
 * Selecting one in the box on the left will update the parameters on the right.
 * The `New` button will create a new substrate with default parameters
@@ -98,61 +97,61 @@ We load a PhysiCell sample model, the virus-macrophage, to illustrate the conten
 ---
 ## Cell Types
 
-<img src="./images/celltypes_virus.png" width="100%">
+<img src="./images/celltypes_virus.png" width="20%">
 
 * This tab is used to define the phenotype for each cell type and therefore exposes a large number of parameters. Note that it has subtabs, one for each phenotypic cell behavior.
 * ...
 
 ---
 <details>
-  <summary><h3>Expand to show Cell Types phenotype subtabs</h3></summary>
+  <summary><h3>Expand to show Cell Types subtabs</h3></summary>
 
 [[cycle](#cycle)] [[death](#death)] [[volume](#volume)] [[mechanics](#mechanics)] [[motility](#motility)] [[secretion](#secretion)] [[interactions](#interactions)] [[intracellular](#intracellular)] [[custom-data](#custom-data)] 
 
   ### Cycle
-  <img src="./images/cell_cycle_virus.png" width="100%">
+  <img src="./images/cell_cycle_virus.png" width="20%">
 
    Define the cycle parameters for this cell type.
   
   ### Death
-  <img src="./images/cell_death_virus.png" width="100%">
+  <img src="./images/cell_death_virus.png" width="20%">
 
    Define the death parameters for this cell type.
 
   ### Volume
-  <img src="./images/cell_volume_virus.png" width="100%">
+  <img src="./images/cell_volume_virus.png" width="20%">
 
    Define the volume parameters for this cell type.
 
   ### Mechanics
-  <img src="./images/cell_mechanics_virus.png" width="100%">
+  <img src="./images/cell_mechanics_virus.png" width="20%">
 
    Define the mechanics parameters for this cell type.
 
   ### Motility
-  <img src="./images/cell_motility_virus_epi.png" width="100%">
+  <img src="./images/cell_motility_virus_epi.png" width="20%">
 
-  <img src="./images/cell_motility_virus_mac.png" width="100%">
+  <img src="./images/cell_motility_virus_mac.png" width="20%">
 
    Define the motility parameters for this cell type.
 
   ### Secretion
-  <img src="./images/cell_secretion_virus_epi.png" width="100%">
+  <img src="./images/cell_secretion_virus_epi.png" width="20%">
 
    Define the secretion/uptake parameters for this cell type.
 
   ### Interactions
-  <img src="./images/cell_interactions_virus.png" width="100%">
+  <img src="./images/cell_interactions_virus.png" width="20%">
 
    Define the interactions parameters for this cell type.
 
   ### Intracellular
-  <img src="./images/cell_intracellular_virus.png" width="100%">
+  <img src="./images/cell_intracellular_virus.png" width="20%">
 
    Define the intracellular parameters for this cell type.
 
   ### Custom Data
-  <img src="./images/cell_customdata_virus.png" width="100%">
+  <img src="./images/cell_customdata_virus.png" width="20%">
 
    Define the custom data parameters for this cell type.
 
@@ -164,7 +163,8 @@ We load a PhysiCell sample model, the virus-macrophage, to illustrate the conten
 ---
 ## User Params
 
-  <img src="./images/user_params_virus.png" width="100%">
+<img src="./images/user_params_virus.png" width="20%">
+
 
 User parameters are general model parameters (as opposed to Cell Types | Custom Data parameters which are specific to cell data). User parameters are accessed in your model's C++ code. Search for `parameters.ints, parameters.doubles`, etc, in various sample projects' `custom.cpp` files. You can click/drag a column separator in this table to change its width. (Unfortunately, that column width information is not retained if you exit the Studio and start it again)
 
@@ -181,7 +181,7 @@ The typical steps are: select the region type, fill type, # cells (if fill type 
 
 In the following image, we demonstrate with a simple example. Here, we have loaded the template model (hence the `default` cell type). With the selected geometric region `annulus/disk`, `random fill`, `# cells` = 100, and the specified center and radii, we click `Plot` to see the result. Note that since R1 > 0, it will indeed be an annulus; if R1=0, we would have a disk.
 
-<img src="./images/ics_template_annulus_100.png" width="70%">
+<img src="./images/ics_template_annulus_100.png" width="20%">
 
 In the following, we create ICs for two cell types, each in a different region.
 * `Clear all` to start fresh
@@ -190,9 +190,7 @@ In the following, we create ICs for two cell types, each in a different region.
 * if we make a mistake for one of the Plots, use `Undo last`
 * provide a unique .csv filename instead of `cell.csv` if you want, and click `Save`
 
-<img src="./images/ics_disk_hex.png" width="70%">
-<img src="./images/ics_disk_rect.png" width="70%">
-
+<img src="./images/ics_disk_hex.png" width="20%"><img src="./images/ics_disk_rect.png" width="20%">
 
 The .csv file should contain content that looks similar to the following. Note that since we had `use cell type names` checked, each line will include the name of that cell type. Also, in this case, there will be a single header line at the top that starts with `x` (for the x-coordinate column). If we don't check the `use cell type names`, this is the older style of .csv and it will use cell IDs (integer values) instead of cell type names. And there will not be a header line.
 ```
@@ -212,7 +210,7 @@ x,y,z,type,volume,cycle entry,custom:GFP,custom:sample
 ---
 # Run
 
-<img src="./images/run_virus.png" width="100%">
+<img src="./images/run_virus.png" width="20%">
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
 
@@ -226,42 +224,39 @@ Alternatively, you can plot cells' scalar values when the `.mat` radio button is
 
 We show four snapshots of .svg data during the time series of the virus-macrophage simulation.
 
-<img src="./images/plot_virus_t0.png" width="75%"><img src="./images/plot_virus_t1.png" width="75%"><img src="./images/plot_virus_t2.png" width="75%"><img src="./images/plot_virus_t3.png" width="75%">
+<img src="./images/plot_virus_t0.png" width="20%"><img src="./images/plot_virus_t1.png" width="20%"><img src="./images/plot_virus_t2.png" width="20%"><img src="./images/plot_virus_t3.png" width="20%">
 
 ---
-<img src="./images/plot_virus_pressure.png" width="75%">
+<img src="./images/plot_virus_pressure.png" width="20%">
 
 Plotting the cells' `pressure` scalar (.mat) field.
 
 ---
 
-<img src="./images/population_plot_virus.png" width="50%">
+<img src="./images/population_plot_virus.png" width="20%">
 
-The `Population plot` button will generate a time series plot of the cell (types) populations. This will appear in a separate popup window (and sometimes may get hidden behind the main Studio window).
+The `Population plot` button will plot the cell (types) populations over the entire simulation (or however far it has currently gotten). This will appear in a separate popup window (and sometimes may get hidden behind the main Studio window).
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
 
 ---
 # Plot 3D
 
-It is also possible to run and visualize results from a 3D model. However, the Studio must be *started* with a special argument: `-3` or `--3D`. It is not currently possible to switch between 2D and 3D plotting in the same Studio session. In 2D, as we've seen, cells are displayed as circles and substrates as colored planar meshes. In 3D, cells are displayed as spheres and substrates/signals are displayed using orthogonal slicing planes and/or a contour surface. To help visualize a crowded domain of cells, it is also possible to hide orthogonal regions using clipping planes (see the `View` menu). Currently, we provide a minimal, but hopefully useful set of options for plotting in 3D. More options will be added. We also provide interfaces to [community tools](#Community-Tools) to visualize output files from a PhysiCell simulation.
+While not quite as advanced as 2D plotting, it is also possible to run and visualize results from a 3D model. The UI for 3D plots is continuing to evolve. To run a 3D model, you need to use the `-3` or `--3D` argument, e.g.,
 ```
 # if running from the Studio root folder:
 python bin/studio.py -e project -c config/simple3D_test1.xml -3
 ```
 
-<img src="./images/plot3D_cell_types.png" width="70%">
+<img src="./images/plot3D_cell_types.png" width="20%">
 
-* by default, we plot cells colored by cell type (note the colorbar is not yet labeled for discrete values)
+* by default, we plot cells colored by cell type
 
-* use the `View` menu to see options for displaying and filtering 3D results
-
-<img src="./images/filters3D.png" width="30%">
-
+* use the `View` menu to toggle display of the 3D axes
 
 ---
 
-<img src="./images/plot3D_pressure_dynamic.png" width="70%">
+<img src="./images/plot3D_pressure_dynamic.png" width="20%">
 
 * click `partial` to populate the combobox then select `pressure`
 
@@ -269,18 +264,17 @@ python bin/studio.py -e project -c config/simple3D_test1.xml -3
 
 ---
 
-<img src="./images/plot3D_pressure_fixed.png" width="70%">
+<img src="./images/plot3D_pressure_fixed.png" width="20%">
 * after checking `fix`, we can manually specify the colorbar range min/max for all frames
 
 
-<details>
-  <summary><h3>Expand for 3D Plotting interaction hints</h3></summary>
+### 3D Plotting reminders
 
 For 3D plotting, the following are useful commands to affect the display and mode of interaction:
 
   * Keypress j / Keypress t: toggle between joystick (position sensitive) and trackball (motion sensitive) styles. In joystick style, motion occurs continuously as long as a mouse button is pressed. In trackball style, motion occurs when the mouse button is pressed and the mouse pointer moves.
 
-  * (Warning: you should just stay in camera mode) Keypress c / Keypress a: toggle between camera and actor modes. In camera mode, mouse events affect the camera position and focal point. In actor mode, mouse events affect the actor that is under the mouse pointer.
+  * Keypress c / Keypress a: toggle between camera and actor modes. In camera mode, mouse events affect the camera position and focal point. In actor mode, mouse events affect the actor that is under the mouse pointer.
 
   * Button 1: rotate the camera around its focal point (if camera mode) or rotate the actor around its origin (if actor mode). The rotation is in the direction defined from the center of the renderer's viewport towards the mouse position. In joystick mode, the magnitude of the rotation is determined by the distance the mouse is from the center of the render window.
 
@@ -292,34 +286,20 @@ For 3D plotting, the following are useful commands to affect the display and mod
 
   * Keypress f: fly to the picked point
   
+  * Keypress p: perform a pick operation. The render window interactor has an internal instance of vtkCellPicker that it uses to pick.
+
   * Keypress r: reset the camera view along the current view direction. Centers the actors and moves the camera so that all actors are visible.
 
   * Keypress s: modify the representation of all actors so that they are surfaces.
 
+  * Keypress u: invoke the user-defined function. Typically, this keypress will bring up an interactor that you can type commands in.
+
   * Keypress w: modify the representation of all actors so that they are wireframe.
   
-  * (Warning: avoid) Keypress p: perform a pick operation. The render window interactor has an internal instance of vtkCellPicker that it uses to pick.
-
-  
-</details>
 
 ---
 # Community Tools
 
-The Studio provides interfaces to other tools used in the broader modeling community. 
-  
-## Simularium
-  
-[Simularium](https://simularium.allencell.org/) offers interactive visualization in a browser. We have collaborated with their team to provide scripts that will convert PhysiCell output files into a compressed, binary file that can be loaded into their [viewer](https://simularium.allencell.org/viewer). The Simularium viewer offers a complementary set of options to the Studio.
+The Studio provides interfaces to other tools used in the broader modeling community. For example, it is possible to export some of your PhysiCell output data into a format for [Simularium](https://simularium.allencell.org/) and then load that file into their [viewer](https://simularium.allencell.org/viewer) to visualilze in your browser. 
 
-<img src="./images/simularium_test1.png" width="70%">
-
----
-  
-## ParaView
-  
-[ParaView](https://www.paraview.org/) is a popular open source application for scientific visualization. We provide scripts that assist with loading PhysiCell data. More coming...
-
-  
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
-
+<img src="./images/simularium_test1.png" width="20%">
