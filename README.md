@@ -17,28 +17,22 @@ This Guide will be updated as the Studio itself is updated, however there may be
 See the README on the Studio GitHub repository for its dependencies.
 
 ---
-## Running the Studio
+## Installing and Running the Studio
 
-There are two primary ways to run the Studio:
+The primary way to install and run the Studio is from a PhysiCell root directory:
 
-1) from a PhysiCell directory: if you have downloaded PhysiCell and are either just learning it, e.g., compiling and running the sample projects, or are actively building your own model, you might run the Studio (installed in another directory) from the command line as follows:
+* download the latest release of the Studio from https://github.com/PhysiCell-Tools/PhysiCell-Studio/releases and run it from your PhysiCell root directory, for example:
 ```
-python <path-to-Studio-directory>/bin/studio.py -e <name-of-executable-model>
+~/PhysiCell$ unzip PhysiCell-Studio-2.26.5.zip
+~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py
+
+# optionally, specify the name of the executable model for the Run tab:
+~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py -e <name-of-executable-model>
 ```
 Note:
 * there are ways to create an alias and/or a symbolic link to shorten this command, depending on your operating system
 * you may need to prefix your executable name with `./`, depending on your PATH environment variable
 * when you File->Save or Run the model, the configuration file (.xml) will be updated. If you want to retain your original .xml, you should make a copy
-
-2) from the Studio (root) directory:
-```
-python bin/studio.py
-```
-Note:
-* unless you're running from a "bundled" Studio package which includes a sample executable model, the above command will only let you *edit* a model's .xml and not run an executable. However, you can copy an executable from somewhere else into the Studio root directory and then Run it from there.
-
-A third use case for the Studio is to use it *only* for plotting results (/output) from your model. In that case, you would typically run it from the root PhysiCell directory and in the `Plot` tab, be sure to reference the correct output directory (folder).
-
 ---
 ## Studio Overview
 
