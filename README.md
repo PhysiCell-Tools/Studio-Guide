@@ -37,6 +37,7 @@ It will download and install the latest version of the Studio into a directory c
 
 ```
 ~/PhysiCell$ python studio/bin/studio.py
+```
 
 Optionally, you can specify the name of the executable model and its config (.xml) file via command line arguments, rf.:
 ```
