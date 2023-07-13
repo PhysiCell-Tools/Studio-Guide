@@ -99,6 +99,7 @@ this model:
 ## Microenvironment
 
 <img src="./images/microenv_virus.png" width="100%">
+
 * Define the substrates (or signals) used in the model
 * Selecting one in the box on the left will update the parameters on the right.
 * The `New` button will create a new substrate with default parameters
