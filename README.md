@@ -38,8 +38,9 @@ It will download and install the latest version of the Studio into a directory c
 ```
 ~/PhysiCell$ python studio/bin/studio.py
 
-# optionally, you can specify the name of the executable model and its config (.xml) file via command line arguments, rf.:
-~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py --help
+Optionally, you can specify the name of the executable model and its config (.xml) file via command line arguments, rf.:
+```
+~/PhysiCell$ python studio/bin/studio.py --help
 ```
 
 Note:
@@ -67,7 +68,7 @@ this model:
 
 # Note that the config/PhysiCell_settings.xml for the virus-macrophage-sample uses a hierarchical format
 # in PhysiCell 1.12.0. The Studio requires a "flattened" format, therefore we provide one using the -c argument:
-~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py -e virus-sample -c PhysiCell-Studio-2.26.5/config/virus_macrophage.xml 
+~/PhysiCell$ python studio/bin/studio.py -e virus-sample -c studio/config/virus_macrophage.xml 
 ```
 
 ---
