@@ -19,19 +19,33 @@ See the README on the Studio GitHub repository for its dependencies.
 ---
 ## Installing and Running the Studio
 
-The primary way to install and run the Studio is from a PhysiCell root directory:
+The most common way to run the Studio is from a PhysiCell root directory. Therefore, we assume you have installed
+PhysiCell and, for the instructions here, we assume you've installed it in your home directory in a directory called
+`PhysiCell` (without any version number suffix). To download the Studio and have it be installed in its own
+directory inside the PhysiCell directory, click this link and download the `get_studio.py`:
 
-* download the latest release of the Studio from https://github.com/PhysiCell-Tools/PhysiCell-Studio/releases and run it from your PhysiCell root directory, for example:
+* https://github.com/PhysiCell-Tools/PhysiCell-Studio/blob/main/get_studio.py 
+
+![](./images/download_get_studio.png)
+
+Then run the script:
 ```
-~/PhysiCell$ unzip PhysiCell-Studio-2.26.5.zip
-~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py
+~/PhysiCell$ python get_studio.py
+```
+
+It will download and install the latest version of the Studio into a directory called `studio` (without any version number suffix). This script will also print out sample commands for running the Studio, the simplest being:
+
+```
+~/PhysiCell$ python studio/bin/studio.py
 
 # optionally, you can specify the name of the executable model and its config (.xml) file via command line arguments, rf.:
 ~/PhysiCell$ python PhysiCell-Studio-2.26.5/bin/studio.py --help
 ```
+
 Note:
 * there are ways to create an alias and/or a symbolic link to make it easier to run the Studio
 * you may need to prefix your executable name with `./`, depending on your PATH environment variable
+* this guide will use a Unix-style command syntax; Windows syntax may differ
 * when you File->Save or Run the model, the configuration file (.xml) will be updated. If you want to retain your original .xml, you should make a copy
 ---
 ## Studio Overview
