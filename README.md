@@ -118,9 +118,7 @@ this model:
 <img src="./images/celltypes_virus.png" width="100%">
 
 * This tab is used to define the phenotype for each cell type and therefore exposes a large number of parameters. Note that it has subtabs, one for each phenotypic cell behavior.
-* ...
 
----
 <details>
   <summary><h3>Expand to show Cell Types phenotype subtabs</h3></summary>
 
