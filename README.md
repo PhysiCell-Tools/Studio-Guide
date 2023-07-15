@@ -14,7 +14,7 @@ This Guide will be updated as the Studio itself is updated, however there may be
 ---
 ## Dependencies
 
-See the README on the Studio GitHub repository for its dependencies.
+We recommend installing the [Anaconda Python distribution](https://www.anaconda.com/products/individual) to have the necessary Python modules (used by the GUI, data parsing, and visualization). 
 
 ---
 ## Installing and Running the Studio
