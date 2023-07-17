@@ -3,7 +3,7 @@
 [[full images](README.md)]
 [[small images](README-small-images.md)]
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
+[ [[top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] }
 
 PhysiCell Studio is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
@@ -190,14 +190,15 @@ User parameters are general model parameters (as opposed to Cell Types | Custom 
 
   <img src="./images/rules_poster_demo.png" width="100%">
 
-This contents of this section is independent of the others in this guide which used the virus-macrophage sample project.
+This section is independent of the others in this guide in that it does not relate to the virus-macrophage sample project.
 
 The Rules tab is a recent addition to the Studio and will continue to be improved in future releases. 
 The rules functionality in PhysiCell is both powerful and elegant. A rule, for a cell type, specifies how
 that cell will respond to a specific signal. In other words, rules will determine cell behaviors. The response
 is defined by a Hill function and its parameters are also specified in this tab, along with comboboxes that
-list the Signals and Behaviors. For an introductory tutorial on using rules, see https://github.com/physicell-training/nw2023.
+list the Signals and Behaviors. For an introductory tutorial on using rules, see https://github.com/physicell-training/nw2023. The screenshots shown here reflect that tutorial.
 
+  <img src="./images/rule1_pressure_signal.png" width="100%">
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
