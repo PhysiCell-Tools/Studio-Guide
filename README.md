@@ -3,7 +3,7 @@
 [[full images](README.md)]
 [[small images](README-small-images.md)]
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 PhysiCell Studio is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
@@ -93,7 +93,7 @@ this model:
 *  `virtual walls` - if checked, indicates that cells should bounce away from the domain boundaries when they get too close
 *  `disable springs` - if checked, do not perform elastic spring attachments between cells
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
 ## Microenvironment
@@ -110,7 +110,7 @@ this model:
 * `calculate gradients` - check if you want substrate gradients to be computed at each "Mechanics dt" timestep. You would need to do so, for example, if certain cell types were chemotaxing (rf. Cell Types | Motility subtab).
 * `track in agents` - check if you want cells to keep track of the substrate concentration during secretion
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
 ## Cell Types
@@ -174,7 +174,7 @@ this model:
 
 </details>
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
 ## User Params
@@ -183,7 +183,23 @@ this model:
 
 User parameters are general model parameters (as opposed to Cell Types | Custom Data parameters which are specific to cell data). User parameters are accessed in your model's C++ code. Search for `parameters.ints, parameters.doubles`, etc, in various sample projects' `custom.cpp` files. You can click/drag a column separator in this table to change its width. (Unfortunately, that column width information is not retained if you exit the Studio and start it again)
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
+
+---
+## Rules
+
+  <img src="./images/rules_poster_demo.png" width="100%">
+
+This contents of this section is independent of the others in this guide which used the virus-macrophage sample project.
+
+The Rules tab is a recent addition to the Studio and will continue to be improved in future releases. 
+The rules functionality in PhysiCell is both powerful and elegant. A rule, for a cell type, specifies how
+that cell will respond to a specific signal. In other words, rules will determine cell behaviors. The response
+is defined by a Hill function and its parameters are also specified in this tab, along with comboboxes that
+list the Signals and Behaviors. For an introductory tutorial on using rules, see https://github.com/physicell-training/nw2023.
+
+
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
 # ICs (Initial Conditions)
@@ -222,14 +238,15 @@ x,y,z,type,volume,cycle entry,custom:GFP,custom:sample
 396.82542109590844,438.8457680040665,0.0,ctype2
 413.65084219181693,438.8457680040665,0.0,ctype2
 ```
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
+
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
 # Run
 
 <img src="./images/run_virus.png" width="100%">
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
 # Plot
@@ -254,7 +271,7 @@ Plotting the cells' `pressure` scalar (.mat) field.
 
 The `Population plot` button will generate a time series plot of the cell (types) populations. This will appear in a separate popup window (and sometimes may get hidden behind the main Studio window).
 
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
 # Plot 3D
@@ -336,5 +353,5 @@ The Studio provides interfaces to other tools used in the broader modeling commu
 [ParaView](https://www.paraview.org/) is a popular open source application for scientific visualization. We provide scripts that assist with loading PhysiCell data. More coming...
 
   
-[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)]
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
