@@ -198,7 +198,7 @@ that cell will respond to a specific signal. In other words, rules will determin
 is defined by a Hill function and its parameters are also specified in this tab, along with comboboxes that
 list the Signals and Behaviors. For an introductory tutorial on using rules, see https://github.com/physicell-training/nw2023. The screenshots shown here reflect that tutorial.
 
-  <img src="./images/rule1_pressure_signal.png" width="100%">
+  <img src="./images/rule_pressure_cycleentry_plot.png" width="60%">
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
