@@ -67,7 +67,7 @@ Each tab will be described in detail in the sections below, but briefly they are
 * `Plot` - provide plotting options for visualizing output results (even while the simulation is being run)
 
 
-[[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] 
+[[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] 
 
 ---
 ## Sample model: virus-macrophage
