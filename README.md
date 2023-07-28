@@ -279,6 +279,11 @@ We show four snapshots of .svg data during the time series of the virus-macropha
 Plotting the cells' `pressure` scalar (.mat) field.
 
 ---
+The `View` menu provides `Plot options` (in this case, for 2D plotting):
+
+<img src="./images/filters2D.png" width="75%">
+
+---
 
 <img src="./images/population_plot_virus.png" width="50%">
 
