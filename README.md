@@ -281,7 +281,7 @@ Plotting the cells' `pressure` scalar (.mat) field.
 ---
 The `View` menu provides `Plot options` (in this case, for 2D plotting):
 
-<img src="./images/filters2D.png" width="40%">
+<img src="./images/filters2D.png" width="25%">
 
 ---
 
