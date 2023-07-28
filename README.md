@@ -283,7 +283,7 @@ The `View` menu provides `Plot options` (in this case, for 2D plotting):
 
 <img src="./images/filters2D.png" width="25%">
 
-Most of these options will be self-explanatory when you use them. But note that Cells `fill` will behave differently for .svg vs .mat and  `nucleus` is only meaningful for .svg data. The `voxel grid` and `mech grid` pertain to the two different grids (voxel and mechanics) used in PhysiCell.  
+Most of these options will be self-explanatory when you use them. But note that Cells `fill` will behave differently for .svg vs .mat and  `nucleus` is currently only meaningful for .svg data. The `voxel grid` and `mech grid` pertain to the two different grids (voxel and mechanics) used in PhysiCell.  
 
 ---
 
