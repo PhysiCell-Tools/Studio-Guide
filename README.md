@@ -20,8 +20,7 @@ We recommend installing the [Anaconda Python distribution](https://www.anaconda.
 ## Installing and Running the Studio
 
 The most common way to run the Studio is from a PhysiCell root directory. Therefore, we assume you have installed
-PhysiCell and, for the instructions here, we assume you've installed it in your home directory in a directory called
-`PhysiCell` (without any version number suffix). To download the Studio and have it be installed in its own
+PhysiCell. (In the terminal command lines shown below, PhysiCell has been installed into a directory `~/PhysiCell`, but yours may be something different depending how you installed it). To download the Studio and have it be installed in its own
 directory inside the PhysiCell directory, click this link and download the `get_studio.py`:
 
 * https://github.com/PhysiCell-Tools/PhysiCell-Studio/blob/main/get_studio.py 
@@ -33,14 +32,15 @@ Then run the script:
 ~/PhysiCell$ python get_studio.py
 ```
 
-It will download and install the latest version of the Studio into a directory called `studio` (without any version number suffix). This script will also print out sample commands for running the Studio, the simplest being:
+It will download and install the latest version of the Studio into a directory called `studio` (without any version number suffix). The `get_studio.py` script will also print out sample commands for running the Studio, e.g.:
 
 ```
-~/PhysiCell$ python studio/bin/studio.py
-```
-
-Optionally, you can specify the name of the executable model and its config (.xml) file via command line arguments, rf.:
-```
+~/PhysiCell$ python studio/bin/studio.py -p       # try to load config/PhysiCell_settings.xml
+or,
+~/PhysiCell$ python studio/bin/studio.py          # if no args, try to copy and use a template.xml
+or,
+~/PhysiCell$ python studio/bin/studio.py -c <config_file.xml> -e <executable_program> 
+and,
 ~/PhysiCell$ python studio/bin/studio.py --help
 ```
 
@@ -79,9 +79,12 @@ this model:
 ~/PhysiCell$ make virus-macrophage-sample
 ~/PhysiCell$ make 
 
-# Note that the config/PhysiCell_settings.xml for the virus-macrophage-sample uses a hierarchical format
-# in PhysiCell 1.12.0. The Studio requires a "flattened" format, therefore we provide one using the -c argument:
-~/PhysiCell$ python studio/bin/studio.py -e virus-sample -c studio/config/virus_macrophage.xml 
+# If the resulting config/PhysiCell_settings.xml is in a "flattened" format (which the Studio requires)
+# then you should be able to run:
+~/PhysiCell$ python studio/bin/studio.py -p -e virus-sample
+
+# However, if you happen to have an older, hierarchical .xml format then you will need to use the flattened one in the studio folder:
+~/PhysiCell$ python studio/bin/studio.py -c studio/config/virus_macrophage.xml -e virus-sample
 ```
 
 ---
