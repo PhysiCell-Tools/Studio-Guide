@@ -19,8 +19,8 @@ We recommend installing the [Anaconda Python distribution](https://www.anaconda.
 ---
 ## Installing and Running the Studio
 
-The most common way to run the Studio is from a PhysiCell root directory. Therefore, we assume you have installed
-PhysiCell. (In the terminal command lines shown below, PhysiCell has been installed into a directory `~/PhysiCell`, but yours may be something different depending how you installed it). To download the Studio and have it be installed in its own
+The most common way to run the Studio is from a PhysiCell root directory. Of course you can always download just the Studio and explore (File->Open) the example .xml configuration files (in its /config folder), however, without an executable model, you won't be able to run a simulation and plot results. Therefore, for this Guide, we assume you have installed
+PhysiCell and have compiled a sample model. (In the terminal command lines shown below, PhysiCell has been installed into a directory `~/PhysiCell`, but yours may be something different depending how you installed it). To download the Studio and have it be installed in its own
 directory inside the PhysiCell directory, click this link and download the `get_studio.py`:
 
 * https://github.com/PhysiCell-Tools/PhysiCell-Studio/blob/main/get_studio.py 
@@ -32,7 +32,7 @@ Then run the script:
 ~/PhysiCell$ python get_studio.py
 ```
 
-It will download and install the latest version of the Studio into a directory called `studio` (without any version number suffix). The `get_studio.py` script will also print out sample commands for running the Studio, e.g.:
+It will download and install the latest version of the Studio into a directory called `studio` within your PhysiCell directory. The `get_studio.py` script will also print out sample commands for running the Studio, e.g.:
 
 ```
 ~/PhysiCell$ python studio/bin/studio.py -p       # try to load config/PhysiCell_settings.xml
