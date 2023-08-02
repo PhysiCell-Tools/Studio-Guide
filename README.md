@@ -49,7 +49,7 @@ Note:
 * you may need to prefix your executable name with `./`, depending on your PATH environment variable
 * this guide will use a Unix-style command syntax; Windows syntax may differ
 
-It is important to understand that the XML configuration file you are editing in the Studio will be updated (overwritten) when you do `File->Save`, `File->Save as`, or *when you Run a simulation*. However, the Studio does not do "instantaneous" updates to the XML, so if it encounters a fatal error and crashes, any changes you made will not be automatically saved. Neither does it track changes you made and warn you of unsaved changes when you quit the Studio. Therefore, if you are working on your own model, it is a good practice to `File->Save` (has keyboard shortcut) occasionally.
+It is important to understand that the XML configuration file you are editing in the Studio will be updated (overwritten) when you do `File->Save`, `File->Save as`, or *when you Run a simulation*. However, the Studio does not do "instantaneous" updates to the XML, so if it encounters a fatal error and crashes, any changes you made will not be automatically saved. Neither does it track changes you made and warn you of unsaved changes when you quit the Studio. Therefore, if you are working on your own model, it is a good practice to `File->Save` (has keyboard shortcut) occasionally and adopt the habit of making backup copies of any files you consider critical.
 
 ---
 ## Studio Overview
