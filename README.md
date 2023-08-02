@@ -292,7 +292,7 @@ Most of these options will be self-explanatory when you use them. But note that 
 
 ---
 
-<img src="./images/population_plot_virus.png" width="50%">
+<img src="./images/population_cell_type_plot_virus.png" width="50%">
 
 The `Population plot` button will generate a time series plot of the cell (types) populations. This will appear in a separate popup window (and sometimes may get hidden behind the main Studio window).
 
