@@ -7,9 +7,9 @@
 
 PhysiCell Studio is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
-This User Guide tries to provide brief, but sufficient, guidance on using the Studio - at least its contents (not the challenges involved in developing your particular model). If you experience problems or have questions, please contact us using an appropriate PhysiCell community Slack channel or the Issues section of this GitHub repository. The latter is preferred when reporting a fatal error using the Studio. We also welcome Pull Requests in the Studio's repository (see instructions there) for bug fixes and suggested improvements.
+This User Guide provides brief, but hopefully sufficient, guidance on using the Studio - at least its contents (not the challenges involved in developing your particular model). If you experience problems or have questions, please contact us using an appropriate PhysiCell community Slack channel or the Issues section of this GitHub repository. The latter is preferred when reporting a fatal error using the Studio. We also welcome Pull Requests in the [Studio repository](https://github.com/PhysiCell-Tools/PhysiCell-Studio) (see instructions there) for bug fixes and suggested improvements.
 
-This Guide will be updated as the Studio itself is updated, however there may be a lag. Therefore, if you're running a recent release of the Studio, you may notice some differences in the content described here.
+This Guide will be updated as the Studio itself is updated, however there may be a lag. Therefore, if you are running a recent release of the Studio, you may notice some differences in the content described here.
 
 ---
 ## Dependencies
@@ -19,9 +19,8 @@ We recommend installing the [Anaconda Python distribution](https://www.anaconda.
 ---
 ## Installing and Running the Studio
 
-The most common way to run the Studio is from a PhysiCell root directory. Therefore, we assume you have installed
-PhysiCell and, for the instructions here, we assume you've installed it in your home directory in a directory called
-`PhysiCell` (without any version number suffix). To download the Studio and have it be installed in its own
+The most common way to run the Studio is from a PhysiCell root directory. Of course you can always download just the Studio and explore (File->Open) the example .xml configuration files (in its /config folder), however, without an executable model, you won't be able to run a simulation and plot results. Therefore, for this Guide, we assume you have installed
+PhysiCell and have compiled a sample model. (In the terminal command lines shown below, PhysiCell has been installed into a directory `~/PhysiCell`, but yours may be something different depending how you installed it). To download the Studio and have it be installed in its own
 directory inside the PhysiCell directory, click this link and download the `get_studio.py`:
 
 * https://github.com/PhysiCell-Tools/PhysiCell-Studio/blob/main/get_studio.py 
@@ -33,14 +32,15 @@ Then run the script:
 ~/PhysiCell$ python get_studio.py
 ```
 
-It will download and install the latest version of the Studio into a directory called `studio` (without any version number suffix). This script will also print out sample commands for running the Studio, the simplest being:
+It will download and install the latest version of the Studio into a directory called `studio` within your PhysiCell directory. The `get_studio.py` script will also print out sample commands for running the Studio, e.g.:
 
 ```
-~/PhysiCell$ python studio/bin/studio.py
-```
-
-Optionally, you can specify the name of the executable model and its config (.xml) file via command line arguments, rf.:
-```
+~/PhysiCell$ python studio/bin/studio.py -p       # try to load config/PhysiCell_settings.xml
+or,
+~/PhysiCell$ python studio/bin/studio.py          # if no args, try to copy and use a template.xml
+or,
+~/PhysiCell$ python studio/bin/studio.py -c <config_file.xml> -e <executable_program> 
+and,
 ~/PhysiCell$ python studio/bin/studio.py --help
 ```
 
@@ -79,9 +79,12 @@ this model:
 ~/PhysiCell$ make virus-macrophage-sample
 ~/PhysiCell$ make 
 
-# Note that the config/PhysiCell_settings.xml for the virus-macrophage-sample uses a hierarchical format
-# in PhysiCell 1.12.0. The Studio requires a "flattened" format, therefore we provide one using the -c argument:
-~/PhysiCell$ python studio/bin/studio.py -e virus-sample -c studio/config/virus_macrophage.xml 
+# If the resulting config/PhysiCell_settings.xml is in a "flattened" format (which the Studio requires)
+# then you should be able to run:
+~/PhysiCell$ python studio/bin/studio.py -p -e virus-sample
+
+# However, if you happen to have an older, hierarchical .xml format then you will need to use the flattened one in the studio folder:
+~/PhysiCell$ python studio/bin/studio.py -c studio/config/virus_macrophage.xml -e virus-sample
 ```
 
 ---
