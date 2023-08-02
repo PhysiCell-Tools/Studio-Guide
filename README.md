@@ -7,14 +7,14 @@
 
 PhysiCell Studio is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
-This User Guide provides brief, but hopefully sufficient, guidance on using the Studio - at least its contents (not the challenges involved in developing your particular model). If you experience problems or have questions, please contact us using an appropriate PhysiCell community Slack channel or the Issues section of this GitHub repository. The latter is preferred when reporting a fatal error using the Studio. We also welcome Pull Requests in the [Studio repository](https://github.com/PhysiCell-Tools/PhysiCell-Studio) (see instructions there) for bug fixes and suggested improvements.
+This User Guide provides brief, but hopefully sufficient, guidance on using the Studio - at least its contents (not the challenges involved in developing your particular model). If you experience problems or have questions, please contact us using an appropriate PhysiCell community Slack channel or the [Issues section](https://github.com/PhysiCell-Tools/PhysiCell-Studio/issues) of the Studio GitHub repository. The latter is preferred when reporting a fatal error using the Studio. When reporting problems, please provide the Studio version # (found in the `Studio->About` menu) and the steps to reproduce the problem. We welcome Pull Requests in the [Studio repository](https://github.com/PhysiCell-Tools/PhysiCell-Studio) (see instructions there) for bug fixes and suggested improvements.
 
 This Guide will be updated as the Studio itself is updated, however there may be a lag. Therefore, if you are running a recent release of the Studio, you may notice some differences in the content described here.
 
 ---
 ## Dependencies
 
-We recommend installing the [Anaconda Python distribution](https://www.anaconda.com/products/individual) to have the necessary Python modules (used by the GUI, data parsing, and visualization). 
+We recommend installing the [Anaconda Python distribution](https://www.anaconda.com/products/individual) to have the necessary Python modules (used by the GUI, data parsing, and visualization). In the future, we plan to provide a self-contained Studio bundled package.
 
 ---
 ## Installing and Running the Studio
@@ -48,7 +48,9 @@ Note:
 * there are ways to create an alias and/or a symbolic link to make it easier to run the Studio
 * you may need to prefix your executable name with `./`, depending on your PATH environment variable
 * this guide will use a Unix-style command syntax; Windows syntax may differ
-* when you File->Save or Run the model, the configuration file (.xml) will be updated. If you want to retain your original .xml, you should make a copy
+
+It is important to understand that the XML configuration file you are editing in the Studio will be updated (overwritten) when you do `File->Save`, `File->Save as`, or *when you Run a simulation*. However, the Studio does not do "instantaneous" updates to the XML, so if it encounters a fatal error and crashes, any changes you made will not be automatically saved. Therefore, if you are working on your own model, it is a good practice to `File->Save` (has keyboard shortcut) occasionally.
+
 ---
 ## Studio Overview
 
@@ -133,6 +135,9 @@ this model:
 <img src="./images/celltypes_virus.png" width="100%">
 
 * This tab is used to define the phenotype for each cell type and therefore exposes a large number of parameters. Note that it has subtabs, one for each phenotypic cell behavior.
+* On the left is a table of all cell types defined. You can create a `New` one which will be populated with default PhysiCell parameter values, or make a `Copy` of the currrently selected cell type, or `Delete` the selected one. Creating new cell types will always be appended at the end of the table. (And you should have a sequential numbering of cell type IDs, starting with 0.)
+* You can rename a cell type by double-clicking its name, typing a new name, and pressing Enter.
+* On the right, the `Reset to PhysiCell defaults` does just that - it resets all parameter values to their defaults in the core PhysiCell code. This can be useful if you have been experimenting with different parameter values to see the effect they have on your model, but then decide to do a "reset" of the parameters in this section. This same button appears on the other phenotype subtabs and applies to the parameters in each.
 
 <details>
   <summary><h3>Expand to show Cell Types phenotype subtabs</h3></summary>
