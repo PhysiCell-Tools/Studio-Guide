@@ -241,6 +241,7 @@ In the following, we create ICs for two cell types, each in a different region.
 * select cell type=`ctype2`; create a hex-filled rectangle; Plot
 * if we make a mistake for one of the Plots, use `Undo last`
 * provide a unique .csv filename instead of `cell.csv` if you want, and click `Save`
+* be sure to specify the same folder and file name in the `Config Basics` tab for ICs section there and `enable` it to be used
 
 <img src="./images/ics_disk_hex.png" width="70%">
 <img src="./images/ics_disk_rect.png" width="70%">
