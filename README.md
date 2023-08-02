@@ -294,7 +294,7 @@ Most of these options will be self-explanatory when you use them. But note that 
 
 <img src="./images/population_cell_type_plot_virus.png" width="50%">
 
-The `Population plot` button will generate a time series plot of the cell (types) populations. This will appear in a separate popup window (and sometimes may get hidden behind the main Studio window).
+The `Population plot` button will generate a time series plot of counts of various types of discrete (categorical) data. This will appear in a separate popup window. The type of discrete data is selected from a combobox widget.
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
