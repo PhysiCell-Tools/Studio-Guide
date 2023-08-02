@@ -274,7 +274,7 @@ Alternatively, you can plot cells' scalar values when the `.mat` radio button is
 
 We show four snapshots of .svg data during the time series of the virus-macrophage simulation.
 
-<img src="./images/plot_virus_t0.png" width="75%"><img src="./images/plot_virus_t1.png" width="75%"><img src="./images/plot_virus_t2.png" width="75%"><img src="./images/plot_virus_t2_interferon.png" width="75%">
+<img src="./images/plot_virus_t0.png" width="75%"><img src="./images/plot_virus_t2.png" width="75%"><img src="./images/plot_virus_t2_interferon.png" width="75%">
 
 ---
 <!--- 
