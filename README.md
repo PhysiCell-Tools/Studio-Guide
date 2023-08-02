@@ -49,7 +49,7 @@ Note:
 * you may need to prefix your executable name with `./`, depending on your PATH environment variable
 * this guide will use a Unix-style command syntax; Windows syntax may differ
 
-It is important to understand that the XML configuration file you are editing in the Studio will be updated (overwritten) when you do `File->Save`, `File->Save as`, or *when you Run a simulation*. However, the Studio does not do "instantaneous" updates to the XML, so if it encounters a fatal error and crashes, any changes you made will not be automatically saved. Therefore, if you are working on your own model, it is a good practice to `File->Save` (has keyboard shortcut) occasionally.
+It is important to understand that the XML configuration file you are editing in the Studio will be updated (overwritten) when you do `File->Save`, `File->Save as`, or *when you Run a simulation*. However, the Studio does not do "instantaneous" updates to the XML, so if it encounters a fatal error and crashes, any changes you made will not be automatically saved. Neither does it track changes you made and warn you of unsaved changes when you quit the Studio. Therefore, if you are working on your own model, it is a good practice to `File->Save` (has keyboard shortcut) occasionally.
 
 ---
 ## Studio Overview
@@ -92,7 +92,7 @@ this model:
 ---
 ## Config Basics
 
-<img src="./images/config_virus.png" width="100%">
+<img src="./images/config_virus.png" width="80%">
 
 
 * === Domain ===
@@ -115,7 +115,7 @@ this model:
 ---
 ## Microenvironment
 
-<img src="./images/microenv_virus.png" width="100%">
+<img src="./images/microenv_virus.png" width="80%">
 
 * Define the substrates (or signals) used in the model
 * Selecting one in the box on the left will update the parameters on the right.
@@ -208,7 +208,7 @@ User parameters are general model parameters (as opposed to Cell Types | Custom 
 ---
 ## Rules
 
-  <img src="./images/rules_poster_demo.png" width="100%">
+  <img src="./images/rules_poster_demo.png" width="80%">
 
 This section is independent of the others in this guide in that it does not relate to the virus-macrophage sample project.
 
@@ -218,7 +218,7 @@ that cell will respond to a specific signal. In other words, rules will determin
 is defined by a Hill function and its parameters are also specified in this tab, along with comboboxes that
 list the Signals and Behaviors. For an introductory tutorial on using rules, see https://github.com/physicell-training/nw2023. The screenshots shown here reflect that tutorial.
 
-  <img src="./images/rule_pressure_cycleentry_plot.png" width="60%">
+  <img src="./images/rule_pressure_cycleentry_plot.png" width="50%">
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
@@ -265,6 +265,10 @@ x,y,z,type,volume,cycle entry,custom:GFP,custom:sample
 
 ---
 # Run
+
+The Run tab lets you run a simulation using a specific executable model and specific XML configuration file. Below show the final terminal output for the default virus-sample model. The lower region of the tab contains your normal terminal output you would see if you ran the model from a shell window. It has a scrollbar so you can scroll back to the initial terminal output which summarizes the model parameters, prints the names of all valid Signals and Behaviors available in the Rules tab, any rulesets (from .csv), the PhysiCell version, etc..
+
+* the `Cancel` button will stop the simulation; there is not currently a Halt/Continue option
 
 <img src="./images/run_virus.png" width="100%">
 
