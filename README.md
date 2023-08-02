@@ -115,7 +115,7 @@ this model:
 ---
 ## Microenvironment
 
-<img src="./images/microenv_virus.png" width="80%">
+<img src="./images/microenv_virus.png" width="90%">
 
 * Define the substrates (or signals) used in the model
 * Selecting one in the box on the left will update the parameters on the right.
