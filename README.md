@@ -272,7 +272,7 @@ start rendering those results. The `Play` button will switch to `Pause`, so you 
 
 Alternatively, you can plot cells' scalar values when the `.mat` radio button is selected. There are many types of scalar variables for cells that are stored in the .mat files. You can see the entire list using the `full list` button, then click the combobox above it. These scalar variables will be a combination of hard-coded ones by PhysiCell and model-specific ones defined in the `Cell Types | Custom Data` subtab. The `partial` button will populate the combobox with a more customary subset of scalar variables. Note that you can select a colorbar for the cells' scalars and can fix lower/upper bounds for the values, if that's desired. Otherwise, the colorbar will be dynamic and use the min/max of the current frame of data.
 
-We show four snapshots of .svg data during the time series of the virus-macrophage simulation.
+We plot .svg data from the virus-macrophage simulation. The first is at t=0 and we also display the cell types color legend. Note there are only two cell types and therefore two colors in the legend. However, later in the simulation we note that some of the cells have a different color (yellow-ish). These colors are specified in a custom coloring function in the custom.cpp code. And in the third plot, we also plot the interferon signal.
 
 <img src="./images/plot_virus_t0.png" width="75%"><img src="./images/plot_virus_t2.png" width="75%"><img src="./images/plot_virus_t2_interferon.png" width="75%">
 
