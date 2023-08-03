@@ -1,9 +1,9 @@
 # PhysiCell Studio: User Guide
 
-[[full images](README.md)]
-[[small images](README-small-images.md)]
+<!-- [[full images](README.md)]
+[[small images](README-small-images.md)] -->
 
-[ [[top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] }
+[[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] [[Funding](#funding)]
 
 PhysiCell Studio is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
@@ -63,7 +63,7 @@ Each tab will be described in detail in the sections below, but briefly they are
 * `Microenvironment` - define the microenvironment, i.e., one or more substrates (signals) and their parameters
 * `Cell Types` - define one or more cell types and the phenotype parameters associated with each
 * `User Params` - define optional "user" parameters that are unique to a particular model 
-* `Rules` - optional "rules" associated with a cell type that define responses to signals
+* `Rules` - optional "rules" associated with a cell type that define cell behaviors in response to signals
 * `ICs` - convenience functionality to define simple 2D initial conditions (ICs) for cells
 * `Run` - run a simulation and show the normal PhysiCell output to the terminal
 * `Plot` - provide plotting options for visualizing output results (even while the simulation is being run)
@@ -390,3 +390,23 @@ The Studio provides interfaces to other tools used in the broader modeling commu
   
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
+---
+
+# Funding
+
+* PhysiCell Development:​
+
+  * Breast Cancer Research Foundation ​
+  * Jayne Koskinas Ted Giovanis Foundation for Health and Policy ​
+  * National Cancer Institute (U01CA232137)​
+  * National Science Foundation (1720625, 1818187)​
+
+* Training Materials:​
+  * Administrative supplement to NCI U01CA232137 (Year 2)​
+
+* Other Funding: ​
+  * NCI / DOE / Frederick National Lab for Cancer Research (21X126F)​
+  * DOD / Defense Threat Reduction Agency (HDTRA12110015)​
+  * NIH Common Fund (3OT2OD026671-01S4)
+
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
