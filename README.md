@@ -309,6 +309,28 @@ The `Population plot` button will generate a time series plot of counts of vario
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
+# Plot cells' scalars
+
+It is also possible to plot cells' scalar values using the `.mat` option instead of `.svg`. By default, you will have a "partial list" of scalars to choose from in the combobox widget. These are intended to be more commonly used and therefore easier to find and select.  
+
+<img src="./images/cell_scalars_heterog_partiallist.png" width="25%">
+<img src="./images/cell_scalars_heterog_oncoprotein.png" width="70%">
+
+<img src="./images/cell_scalars_heterog_pressure.png" width="40%">&nbsp;<img src="./images/cell_scalars_heterog_elapsedtime_in_phase.png" width="40%">
+
+However, if you need the full list of scalars that have been written to the .mat files, you can click the `full list` button to list *all* scalars in the combobox. Note that they will be sorted alphabetically.
+
+<img src="./images/cell_scalars_heterog_fulllist.png" width="25%">
+
+Also, the combobox allows for a "filter" - if you type a string, e.g., "adhesion", it will display only those items with the string:
+
+<img src="./images/cell_scalars_heterog_filter.png" width="25%">
+
+
+
+
+
+---
 # Plot 3D
 
 It is also possible to run and visualize results from a 3D model. However, the Studio must be *started* with a special argument: `-3` or `--3D`. It is not currently possible to switch between 2D and 3D plotting in the same Studio session. In 2D, as we've seen, cells are displayed as circles and substrates as colored planar meshes. In 3D, cells are displayed as spheres and substrates/signals are displayed using orthogonal slicing planes and/or a contour surface. To help visualize a crowded domain of cells, it is also possible to hide orthogonal regions using clipping planes (see the `View` menu). Currently, we provide a minimal, but hopefully useful set of options for plotting in 3D. More options will be added. We also provide interfaces to [community tools](#Community-Tools) to visualize output files from a PhysiCell simulation.
