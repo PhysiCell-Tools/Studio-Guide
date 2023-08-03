@@ -1,9 +1,9 @@
 # PhysiCell Studio: User Guide
 
-[[full images](README.md)]
-[[small images](README-small-images.md)]
+<!-- [[full images](README.md)]
+[[small images](README-small-images.md)] -->
 
-[ [[top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] }
+[[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] [[Funding](#funding)]
 
 PhysiCell Studio is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
@@ -49,7 +49,7 @@ Note:
 * you may need to prefix your executable name with `./`, depending on your PATH environment variable
 * this guide will use a Unix-style command syntax; Windows syntax may differ
 
-It is important to understand that the XML configuration file you are editing in the Studio will be updated (overwritten) when you do `File->Save`, `File->Save as`, or *when you Run a simulation*. However, the Studio does not do "instantaneous" updates to the XML, so if it encounters a fatal error and crashes, any changes you made will not be automatically saved. Neither does it track changes you made and warn you of unsaved changes when you quit the Studio. Therefore, if you are working on your own model, it is a good practice to `File->Save` (has keyboard shortcut) occasionally.
+It is important to understand that the XML configuration file you are editing in the Studio will be updated (overwritten) when you do `File->Save` or *when you Run a simulation*. Also, the rules you have in your Rules table will automatically be written to the folder/file you have specified in that tab. But the ICs requires that you explicitly `Save` to the .csv file from the ICs tab. The Studio does not do "instantaneous" updates to the XML, so if it encounters a fatal error and crashes, any changes you made will not be automatically saved. Neither does it track changes you made and warn you of unsaved changes when you quit the Studio. Therefore, if you are working on your own model, it is a good practice to `File->Save` (has keyboard shortcut) occasionally and adopt the habit of making backup copies of any files you consider critical.
 
 ---
 ## Studio Overview
@@ -63,7 +63,7 @@ Each tab will be described in detail in the sections below, but briefly they are
 * `Microenvironment` - define the microenvironment, i.e., one or more substrates (signals) and their parameters
 * `Cell Types` - define one or more cell types and the phenotype parameters associated with each
 * `User Params` - define optional "user" parameters that are unique to a particular model 
-* `Rules` - optional "rules" associated with a cell type that define responses to signals
+* `Rules` - optional "rules" associated with a cell type that define cell behaviors in response to signals
 * `ICs` - convenience functionality to define simple 2D initial conditions (ICs) for cells
 * `Run` - run a simulation and show the normal PhysiCell output to the terminal
 * `Plot` - provide plotting options for visualizing output results (even while the simulation is being run)
@@ -115,7 +115,7 @@ this model:
 ---
 ## Microenvironment
 
-<img src="./images/microenv_virus.png" width="80%">
+<img src="./images/microenv_virus.png" width="90%">
 
 * Define the substrates (or signals) used in the model
 * Selecting one in the box on the left will update the parameters on the right.
@@ -134,8 +134,8 @@ this model:
 
 <img src="./images/celltypes_virus.png" width="100%">
 
-* This tab is used to define the phenotype for each cell type and therefore exposes a large number of parameters. Note that it has subtabs, one for each phenotypic cell behavior.
-* On the left is a table of all cell types defined. You can create a `New` one which will be populated with default PhysiCell parameter values, or make a `Copy` of the currrently selected cell type, or `Delete` the selected one. Creating new cell types will always be appended at the end of the table. (And you should have a sequential numbering of cell type IDs, starting with 0.)
+* This tab is used to define one or more cell types and the phenotype for each. Therefore it exposes a large number of parameters. Note that it has subtabs, one for each phenotypic cell behavior.
+* On the left is a table of all cell types defined. You can create a `New` one which will be populated with default PhysiCell parameter values, or make a `Copy` of the currrently selected cell type, or `Delete` the selected one. Creating new cell types will always be appended at the end of the table and will be assigned a name with a random 3-character suffix. You should rename them to be more meaningful to your model. (The table should maintain a sequential numbering of cell type IDs, starting with 0.)
 * You can rename a cell type by double-clicking its name, typing a new name, and pressing Enter.
 * On the right, the `Reset to PhysiCell defaults` does just that - it resets all parameter values to their defaults in the core PhysiCell code. This can be useful if you have been experimenting with different parameter values to see the effect they have on your model, but then decide to do a "reset" of the parameters in this section. This same button appears on the other phenotype subtabs and applies to the parameters in each.
 
@@ -266,7 +266,7 @@ x,y,z,type,volume,cycle entry,custom:GFP,custom:sample
 ---
 # Run
 
-The Run tab lets you run a simulation using a specific executable model and specific XML configuration file. Below show the final terminal output for the default virus-sample model. The lower region of the tab contains your normal terminal output you would see if you ran the model from a shell window. It has a scrollbar so you can scroll back to the initial terminal output which summarizes the model parameters, prints the names of all valid Signals and Behaviors available in the Rules tab, any rulesets (from .csv), the PhysiCell version, etc..
+The Run tab lets you run a simulation using a specific executable model and specific XML configuration file. The lower region of the tab contains your normal terminal output you would see if you ran the model from a shell window. It has a scrollbar so you can scroll back to the initial terminal output which summarizes the model parameters, prints the names of all valid Signals and Behaviors available in the Rules tab, any rulesets (from .csv), the PhysiCell version, etc..
 
 * the `Cancel` button will stop the simulation; there is not currently a Halt/Continue option
 
@@ -390,3 +390,23 @@ The Studio provides interfaces to other tools used in the broader modeling commu
   
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
+---
+
+# Funding
+
+* PhysiCell Development:​
+
+  * Breast Cancer Research Foundation ​
+  * Jayne Koskinas Ted Giovanis Foundation for Health and Policy ​
+  * National Cancer Institute (U01CA232137)​
+  * National Science Foundation (1720625, 1818187)​
+
+* Training Materials:​
+  * Administrative supplement to NCI U01CA232137 (Year 2)​
+
+* Other Funding: ​
+  * NCI / DOE / Frederick National Lab for Cancer Research (21X126F)​
+  * DOD / Defense Threat Reduction Agency (HDTRA12110015)​
+  * NIH Common Fund (3OT2OD026671-01S4)
+
+[ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
