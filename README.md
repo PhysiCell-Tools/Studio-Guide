@@ -266,7 +266,7 @@ x,y,z,type,volume,cycle entry,custom:GFP,custom:sample
 ---
 # Run
 
-The Run tab lets you run a simulation using a specific executable model and specific XML configuration file. Below show the final terminal output for the default virus-sample model. The lower region of the tab contains your normal terminal output you would see if you ran the model from a shell window. It has a scrollbar so you can scroll back to the initial terminal output which summarizes the model parameters, prints the names of all valid Signals and Behaviors available in the Rules tab, any rulesets (from .csv), the PhysiCell version, etc..
+The Run tab lets you run a simulation using a specific executable model and specific XML configuration file. The lower region of the tab contains your normal terminal output you would see if you ran the model from a shell window. It has a scrollbar so you can scroll back to the initial terminal output which summarizes the model parameters, prints the names of all valid Signals and Behaviors available in the Rules tab, any rulesets (from .csv), the PhysiCell version, etc..
 
 * the `Cancel` button will stop the simulation; there is not currently a Halt/Continue option
 
