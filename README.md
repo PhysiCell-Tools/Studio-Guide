@@ -316,9 +316,11 @@ It is also possible to plot cells' scalar values using the `.mat` option instead
 <img src="./images/cell_scalars_heterog_partiallist.png" width="25%">
 <img src="./images/cell_scalars_heterog_oncoprotein.png" width="70%">
 
+Note that, just as for substrate plots, you can choose from a list of predefined colormaps (`viridis`, etc) and can also fix the colormap range if you want. Otherwise, the colormap range will dynamically adjust per frame.
+
 <img src="./images/cell_scalars_heterog_pressure.png" width="40%">&nbsp;<img src="./images/cell_scalars_heterog_elapsedtime_in_phase.png" width="40%">
 
-However, if you need the full list of scalars that have been written to the .mat files, you can click the `full list` button to list *all* scalars in the combobox. Note that they will be sorted alphabetically.
+If you want the full list of scalars that have been written to the .mat files, click the `full list` button to list *all* scalars in the combobox. Note that they will be sorted alphabetically:
 
 <img src="./images/cell_scalars_heterog_fulllist.png" width="25%">
 
