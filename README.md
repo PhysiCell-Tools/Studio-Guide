@@ -137,6 +137,7 @@ this model:
 * This tab is used to define one or more cell types and the phenotype for each. Therefore it exposes a large number of parameters. Note that it has subtabs, one for each phenotypic cell behavior.
 * On the left is a table of all cell types defined. You can create a `New` one which will be populated with default PhysiCell parameter values, or make a `Copy` of the currrently selected cell type, or `Delete` the selected one. Creating new cell types will always be appended at the end of the table and will be assigned a name with a random 3-character suffix. You should rename them to be more meaningful to your model. (The table should maintain a sequential numbering of cell type IDs, starting with 0.)
 * You can rename a cell type by double-clicking its name, typing a new name, and pressing Enter.
+* WARNING! Currently, if you rename or delete a cell type, we do not automatically update any rules (in the Rules tab) that used them. However, if you quit the Studio and restart it with the same config file, it will perform a validation check of the cell type names used in Rules and let you know if some reference undefined cell types (and simply not insert those into the rules table).
 * On the right, the `Reset to PhysiCell defaults` does just that - it resets all parameter values to their defaults in the core PhysiCell code. This can be useful if you have been experimenting with different parameter values to see the effect they have on your model, but then decide to do a "reset" of the parameters in this section. This same button appears on the other phenotype subtabs and applies to the parameters in each.
 
 <details>
@@ -307,6 +308,30 @@ Most of these options will be self-explanatory when you use them. But note that 
 The `Population plot` button will generate a time series plot of counts of various types of discrete (categorical) data. This will appear in a separate popup window. The type of discrete data is selected from a combobox widget.
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
+
+---
+# Plot cells' scalars
+
+It is also possible to plot cells' scalar values using the `.mat` option instead of `.svg`. By default, you will have a "partial list" of scalars to choose from in the combobox widget. These are intended to be more commonly used and therefore easier to find and select.  
+
+<img src="./images/cell_scalars_heterog_partiallist.png" width="25%">
+<img src="./images/cell_scalars_heterog_oncoprotein.png" width="70%">
+
+Note that, just as for substrate plots, you can choose from a list of predefined colormaps (`viridis`, etc) and can also fix the colormap range if you want. Otherwise, the colormap range will dynamically adjust per frame.
+
+<img src="./images/cell_scalars_heterog_pressure.png" width="40%">&nbsp;<img src="./images/cell_scalars_heterog_elapsedtime_in_phase.png" width="40%">
+
+If you want the full list of scalars that have been written to the .mat files, click the `full list` button to list *all* scalars in the combobox. Note that they will be sorted alphabetically:
+
+<img src="./images/cell_scalars_heterog_fulllist.png" width="25%">
+
+Also, the combobox allows for a "filter" - if you type a string, e.g., "adhesion", it will display only those items with the string:
+
+<img src="./images/cell_scalars_heterog_filter.png" width="25%">
+
+
+
+
 
 ---
 # Plot 3D
