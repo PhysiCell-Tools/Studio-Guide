@@ -37,9 +37,9 @@ It will download and install the latest version of the Studio into a directory c
 ```
 ~/PhysiCell$ python studio/bin/studio.py -p       # try to load config/PhysiCell_settings.xml
 or,
-~/PhysiCell$ python studio/bin/studio.py          # if no args, try to copy and use a template.xml
+~/PhysiCell$ python studio/bin/studio.py          # if no args, it tries to copy template.xml from the studio /config directory and use it
 or,
-~/PhysiCell$ python studio/bin/studio.py -c <config_file.xml> -e <executable_program> 
+~/PhysiCell$ python studio/bin/studio.py -c <config_file.xml> -e <executable_program>   # be explicit about the config file and executable
 and,
 ~/PhysiCell$ python studio/bin/studio.py --help
 ```
