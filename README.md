@@ -57,7 +57,7 @@ It is important to understand that the XML configuration file you are editing in
 
 ![](./images/tabs_only.png)
 
-The Studio consists of multiple tabs, each representing a logical grouping of model parameters and/or functionality.
+PhysiCell Studio consists of multiple tabs, each representing a logical grouping of model parameters and/or functionality.
 Each tab will be described in detail in the sections below, but briefly they are:
 * `Config Basics` - define the domain and other misc parameters of the simulation
 * `Microenvironment` - define the microenvironment, i.e., one or more substrates (signals) and their parameters
@@ -109,7 +109,6 @@ this model:
 * `enable` - check if you are providing a text file that contains data for the initial conditions of cells, including their positions, cell types, etc.
 * === Cells' global behaviors
 *  `virtual walls` - if checked, indicates that cells should be nudged away from the domain boundaries when they get too close
-*  `disable springs` - if checked, do not perform elastic spring attachments between cells
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
@@ -411,9 +410,9 @@ The Studio provides interfaces to other tools used in the broader modeling commu
   
 ## ParaView
   
-[ParaView](https://www.paraview.org/) is a popular open source application for scientific visualization. We provide scripts that assist with loading PhysiCell data. More coming...
-
+[ParaView](https://www.paraview.org/) is a popular open source application for scientific visualization. We provide Python scripts and ParaView state files that can render PhysiCell data at https://github.com/PhysiCell-Tools/vis3D/tree/main/ParaView.
   
+
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
 
 ---
