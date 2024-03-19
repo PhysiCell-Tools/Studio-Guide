@@ -35,9 +35,7 @@ Then run the script:
 It will download and install the latest version of the Studio into a directory called `studio` within your PhysiCell directory. The `get_studio.py` script will also print out sample commands for running the Studio, e.g.:
 
 ```
-~/PhysiCell$ python studio/bin/studio.py -p       # try to load config/PhysiCell_settings.xml
-or,
-~/PhysiCell$ python studio/bin/studio.py          # if no args, it tries to copy template.xml from the studio /config directory and use it
+~/PhysiCell$ python studio/bin/studio.py          # by default, try to load config/PhysiCell_settings.xml and use "project" as executable
 or,
 ~/PhysiCell$ python studio/bin/studio.py -c <config_file.xml> -e <executable_program>   # be explicit about the config file and executable
 and,
