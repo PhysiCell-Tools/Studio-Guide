@@ -344,7 +344,7 @@ python bin/studio.py -e project -c config/simple3D_test1.xml -3
 
 * by default, we plot cells colored by cell type (note the colorbar is not yet labeled for discrete values)
 
-* use the `View` menu to see options for displaying and filtering 3D results
+* use the `View` menu to see options for displaying and filtering 3D results. The filters at the top let you select orthogonal planes to show (the selected) substrate concentration. The filters below those let you select clipping planes that affect the visibility of cells.
 
 <img src="./images/filters3D.png" width="30%">
 
