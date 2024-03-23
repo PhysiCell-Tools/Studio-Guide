@@ -16,7 +16,7 @@ This Guide will be updated as the Studio itself is updated, however there may be
 ---
 ## Dependencies
 
-We recommend installing the [Anaconda Python distribution](https://www.anaconda.com/products/individual) to have the necessary Python modules (used by the GUI, data parsing, and visualization). In the future, we plan to provide a self-contained Studio bundled package.
+We recommend installing the [Anaconda Python distribution](https://www.anaconda.com/products/individual) to have the necessary Python modules (used by the GUI, data parsing, and visualization). However, if you prefer to attempt a more minimal approach, e.g., using your system's Python, we have provided a `requirements.txt` and an `environment.yml` in the Studio repository to use with either `pip` or `conda`.  In the future, we plan to provide a self-contained Studio bundled package.
 
 ---
 ## Installing and Running
