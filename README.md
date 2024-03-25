@@ -47,7 +47,7 @@ and,
 Note:
 * there are ways to create an alias and/or a symbolic link to make it easier to run the Studio
 * you may need to prefix your executable name with `./`, depending on your PATH environment variable
-* this guide will use a Unix-style command syntax; Windows syntax may differ (e.g., you will probably need a ".exe" suffix on the executable program name and you may need back slashes instead of forward slashes, depending on your shell)
+* this guide will use a Unix-style command syntax; Windows syntax will differ slightly (e.g., you will need a ".exe" suffix on the executable program name)
 
 It is important to understand that the XML configuration file you are editing in the Studio will be updated (overwritten) when you do `File->Save` or *when you Run a simulation*. Also, the rules you have in your Rules table will automatically be written to the folder/file you have specified in that tab. But the ICs requires that you explicitly `Save` to the .csv file from the ICs tab. The Studio does not do "instantaneous" updates to the XML, so if it encounters a fatal error and crashes, any changes you made will not be automatically saved. Neither does it track changes you made and warn you of unsaved changes when you quit the Studio. Therefore, if you are working on your own model, it is a good practice to `File->Save` (has keyboard shortcut) occasionally and adopt the habit of making backup copies of any files you consider critical.
 
