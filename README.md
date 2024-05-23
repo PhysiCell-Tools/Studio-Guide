@@ -5,7 +5,7 @@
 
 [[Dependencies](#dependencies)] [[Installing and Running](#installing-and-running)] [[Support](#support)] [[Overview](#studio-overview)]
 
-[[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] [[Funding](#funding)]
+[[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] [[Funding](#funding)] [[Cite](#cite)]
 
 PhysiCell Studio ([preprint](https://www.biorxiv.org/content/10.1101/2023.10.24.563727v2)) is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
@@ -439,5 +439,9 @@ The Studio provides interfaces to other tools used in the broader modeling commu
   * NCI / DOE / Frederick National Lab for Cancer Research (21X126F)​
   * DOD / Defense Threat Reduction Agency (HDTRA12110015)​
   * NIH Common Fund (3OT2OD026671-01S4)
+
+# Cite
+
+If you cite [PhysiCell Studio](https://www.biorxiv.org/content/10.1101/2023.10.24.563727v2), we also request that you cite [PhysiCell](https://doi.org/10.1371/journal.pcbi.1005991).
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
