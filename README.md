@@ -442,6 +442,6 @@ The Studio provides interfaces to other tools used in the broader modeling commu
 
 # Cite
 
-If you cite [PhysiCell Studio](https://www.biorxiv.org/content/10.1101/2023.10.24.563727v2), we also request that you cite [PhysiCell](https://doi.org/10.1371/journal.pcbi.1005991).
+If you cite [PhysiCell Studio](https://doi.org/10.46471/gigabyte.128), we also request that you cite [PhysiCell](https://doi.org/10.1371/journal.pcbi.1005991).
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
