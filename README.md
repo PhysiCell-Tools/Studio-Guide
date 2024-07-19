@@ -5,7 +5,7 @@
 
 [[Dependencies](#dependencies)] [[Installing and Running](#installing-and-running)] [[Support](#support)] [[Overview](#studio-overview)]
 
-[[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] [[Funding](#funding)]
+[[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)] [[Funding](#funding)] [[Cite](#cite)]
 
 PhysiCell Studio ([preprint](https://www.biorxiv.org/content/10.1101/2023.10.24.563727v2)) is a graphical tool to simplify PhysiCell model editing. It provides a multi-tabbed GUI that allows graphical editing of the model and its associated XML, including the creation/deletion of fundamental objects, e.g., substrates (or signals) in the microenvironment, and cell types. It also lets users run their model and interactively visualize results, allowing for more rapid model refinement.
 
@@ -55,7 +55,7 @@ It is important to understand that the XML configuration file you are editing in
 ## Support
 
 We want to help build a community that supports PhysiCell modelers and developers. We are still exploring options
-for choosing a "best" online forum. Currently, we primarily use Slack. Unfortunately, it is by invite-only (and the invite itself expires after 30 days). Here's an [invite to join our Slack channel](https://join.slack.com/t/mc2-center/shared_invite/zt-2f6yl8mk6-pHXaXUxoap__oXocdAIAiA) (and we'll update that link upon expiration). In the past, we've used [SourceForge](https://sourceforge.net/p/physicell/tickets) and that is still an option for filing trouble tickets or just asking questions. [GitHub Issues for the Studio](https://github.com/PhysiCell-Tools/PhysiCell-Studio/issues) is another option. The `Help` menu of the Studio has a link to Issues page. In order to post to any of these sites, you will need to have an account (that's free). We have looked into several other social forums and they all come with pros and cons - cost, usability, security, etc.. If you have suggestions for ones that you like, please let us know!
+for choosing a "best" online forum. Currently, we primarily use Slack. Unfortunately, it is by invite-only (and the invite itself expires after 30 days). Here's an [invite to join our Slack channel](https://join.slack.com/t/physicellcomm-sf93727/shared_invite/zt-2m7g8i61i-~Swlq82LJdjFWH7i5uMEHw) (and we'll update that link upon expiration; if you have a problem, contact us via email). In the past, we've used [SourceForge](https://sourceforge.net/p/physicell/tickets) and that is still an option for filing trouble tickets or just asking questions. [GitHub Issues for the Studio](https://github.com/PhysiCell-Tools/PhysiCell-Studio/issues) is another option. The `Help` menu of the Studio has a link to Issues page. In order to post to any of these sites, you will need to have an account (that's free). We have looked into several other social forums and they all come with pros and cons - cost, usability, security, etc.. If you have suggestions for ones that you like, please let us know!
 
 ---
 ## Studio Overview
@@ -305,7 +305,7 @@ The `View` menu provides `Plot options` (in this case, for 2D plotting):
 <img src="./images/filters2D_view_options.png" width="25%">
 
 Most of these options will be self-explanatory when you use them. But note that Cells `fill` will behave differently for .svg vs .mat and  `nucleus` is currently only meaningful for .svg data. The `voxel grid` and `mech grid` pertain to the two different grids (voxel and mechanics) used in PhysiCell.  
-The `save frame*.png` will save sequentially numbered .png files in your output folder. To reset the counter, toggle off/on the checkbox. This is a first step to generating a movie (.gif or .mp4), but for now you will need to generate your own movie (via ImageMagick, etc) using the .png files as input.
+The `save frame*.png` will save sequentially numbered .png files in your output folder. To reset the counter, toggle off/on the checkbox. This is a first step to generating a movie (.gif or .mp4), but for now you will need to generate your own movie (via ImageMagick, etc) using the .png files as input. If you are at the beginning of the plots (via the `|<` button), then you toggle on the `save frame*.png` checkbox in the `Plot options`, then press `Play`, it will save sequentially numbered images starting with `frame0001.png`. Unfortunately, it misses the "0th" plot (the initial conditions). For now, press the `|<` button to generate the "N+1" .png image and then manually rename it to be `frame0000.png`.
 
 ---
 
@@ -439,5 +439,9 @@ The Studio provides interfaces to other tools used in the broader modeling commu
   * NCI / DOE / Frederick National Lab for Cancer Research (21X126F)​
   * DOD / Defense Threat Reduction Agency (HDTRA12110015)​
   * NIH Common Fund (3OT2OD026671-01S4)
+
+# Cite
+
+If you cite [PhysiCell Studio](https://doi.org/10.46471/gigabyte.128), we also request that you cite [PhysiCell](https://doi.org/10.1371/journal.pcbi.1005991).
 
 [ [top](#physicell-studio-user-guide)] [[Config Basics](#config-basics)] [[Microenvironment](#microenvironment)] [[Cell Types](#cell-types)] [[User Params](#user-params)] [[Rules](#rules)] [[ICs](#ics-initial-conditions)] [[Run](#run)] [[Plot](#plot)] [[Plot 3D](#plot-3d)]
