@@ -104,7 +104,7 @@ this model:
 * === Domain ===
 * define the model domain size (we recommend leaving dx=dy=dz=20). A 2D model will have Z range: [-dz/2, dz/2, dz]
 * === Times ===
-* `Max Time` - of the simulation. `+1 day` convenience button to add 1440 mins (1 day)
+* `Max Time` - of the simulation (units are minutes).
 * `Diffusion/Mechanics/Phenotype dt` - 3 time scales in a PhysiCell model (rf. the PhysiCell method paper). Only modify if you're an advanced user.
 * === Misc runtime params ===
 * `# threads` - # of OpenMP threads (to help speed up calculations)
