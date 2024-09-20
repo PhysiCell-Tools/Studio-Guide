@@ -109,6 +109,7 @@ this model:
 * === Misc runtime params ===
 * `# threads` - # of OpenMP threads (to help speed up calculations)
 * `output folder` - where the output files will be written; relative to where you Run the simulation.
+* `Random seed` - choice of using the system clock (providing a different seed with each simulation) or an integer seed. This is the preferred place to provide the seed, rather than the legacy approach of providing the seed as a user parameter (resulting in the warning in red).
 * `Save data(intervals)` - there are (primarily) two types of output files saved by PhysiCell: `SVG` (.svg; for cells' positions, sizes, colors) and `Full` (.mat; for substrate concentrations and custom data). Currently, in the Plot tab, when you plot *both* cells and substrates, it assumes those files were written at the same simulation time. Therefore, you should provide the *same* interval value for both if you plan to plot both. The `Sync` checkbox helps ensure this. However, if you only plan to plot cells' SVG files, then you can set the `Full` interval to a very high value or simply uncheck it to not have any substrate or cells' custom data saved.
 * `Plot SVG substrate` - option to also plot a substrate concentration in the .svg files. If this is enabled, you will need to provide the proper arguments to the `SVG_plot` function in your main.cpp (namely, a custom coloring function for the selected substrate). Refer to the `interaction` sample project for an example.
 * === Initial conditions of cells ===
