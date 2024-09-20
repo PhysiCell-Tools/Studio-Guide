@@ -150,7 +150,7 @@ this model:
 <details>
   <summary><h3>Expand to show Cell Types phenotype subtabs</h3></summary>
 
-[[cycle](#cycle)] [[death](#death)] [[volume](#volume)] [[mechanics](#mechanics)] [[motility](#motility)] [[secretion](#secretion)] [[interactions](#interactions)] [[intracellular](#intracellular)] [[custom-data](#custom-data)] 
+[[cycle](#cycle)] [[death](#death)] [[volume](#volume)] [[mechanics](#mechanics)] [[motility](#motility)] [[secretion](#secretion)] [[interactions](#interactions)] [[intracellular](#intracellular)] [[custom-data](#custom-data)] [[misc](#misc)]
 
   ### Cycle
   <img src="./images/cell_cycle_virus.png" width="100%">
@@ -197,7 +197,12 @@ this model:
   ### Custom Data
   <img src="./images/cell_customdata_virus.png" width="100%">
 
-   Define the custom data parameters for this cell type.
+   Define custom data parameters for this cell type.
+
+  ### Misc
+  <img src="./images/cell_misc_param_distrib.png" width="100%">
+
+   Define initial values of cell parameters using a selected distribution function.
 
 
 </details>
