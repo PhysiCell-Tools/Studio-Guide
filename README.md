@@ -435,7 +435,7 @@ The Studio provides interfaces to other tools used in the broader modeling commu
 
   * Breast Cancer Research Foundation ​
   * Jayne Koskinas Ted Giovanis Foundation for Health and Policy ​
-  * National Cancer Institute (U01CA232137)​
+  * National Cancer Institute (U01CA232137, 1U24CA284156-01A1)​
   * National Science Foundation (1720625, 1818187)​
 
 * Training Materials:​
