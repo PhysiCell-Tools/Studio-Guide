@@ -16,7 +16,15 @@ This Guide will be updated as the Studio itself is updated, however there may be
 ---
 ## Dependencies
 
-We recommend installing the [Anaconda Python distribution](https://www.anaconda.com/products/individual) to have the necessary Python modules (used by the GUI, data parsing, and visualization). However, if you prefer to attempt a more minimal approach, e.g., using your system's Python, we have provided a `requirements.txt` and an `environment.yml` in the Studio repository to use with either `pip` or `conda`.  In the future, we plan to provide a self-contained Studio bundled package.
+The Studio needs Python to run. And it needs certain Python modules installed that are not in the Python standard library. First things first: do you currently have Python installed? If you open a "terminal" (e.g., on Windows, a Command Prompt or a Powershell), then type `python3` (or perhaps just `python`), does it work? If Python is installed on your computer, it should return with something like `Python <version>` and put you in the Python interpreter, i.e., the `>>> ` prompt. Type `quit()` to exit the interpreter. 
+
+But if Python is not installed on your computer, there are various ways to install it, depending on your operating system (Windows, Mac, or Linux). If you are on Windows, then when you tried to run `python3` from a terminal, you probably got a pop up window saying it could not find it and suggesting you download/install it from the Windows Store. We recommend you do that (again, if you are on Windows).
+
+Once you do have Python successfully installed, it should provide another command called `pip3`. You will use this command to install some Python modules that the Studio needs. In the root folder of the Studio, run the following command from your terminal: 
+```
+pip3 install -r requirements.txt
+```
+This should install the additional Python modules necessary to run the Studio.
 
 ---
 ## Installing and Running
