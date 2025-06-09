@@ -16,7 +16,7 @@ This Guide will be updated as the Studio itself is updated, however there may be
 ---
 ## Dependencies
 
-The Studio needs Python to run. And it needs certain Python modules installed that are not in the Python standard library. First things first: do you currently have Python installed? If you open a "terminal" (e.g., on Windows, a Command Prompt or a Powershell), then type `python3` (or perhaps just `python`), does it work? If Python is installed on your computer, it should return with something like `Python <version>` and put you in the Python interpreter, i.e., the `>>> ` prompt. Type `quit()` to exit the interpreter. 
+The desktop version of the Studio needs Python to run (but see Web, zero-install versions below). And it needs certain Python modules installed that are not in the Python standard library. First things first: do you currently have Python installed? If you open a "terminal" (e.g., on Windows, a Command Prompt or a Powershell), then type `python3` (or perhaps just `python`), does it work? If Python is installed on your computer, it should return with something like `Python <version>` and put you in the Python interpreter, i.e., the `>>> ` prompt. Type `quit()` to exit the interpreter. 
 
 But if Python is not installed on your computer, there are various ways to install it, depending on your operating system (Windows, Mac, or Linux). If you are on Windows, then when you tried to run `python3` from a terminal, you probably got a pop up window saying it could not find it and suggesting you download/install it from the Windows Store. We recommend you do that (again, if you are on Windows).
 
@@ -29,9 +29,13 @@ This should install the additional Python modules necessary to run the Studio.
 ---
 ## Installing and Running
 
-The most common way to run the Studio is from a PhysiCell root directory. Of course you can always download just the Studio and explore (File->Open) the example .xml configuration files (in its /config folder), however, without an executable model, you won't be able to run a simulation and plot results. Therefore, for this Guide, we assume you have installed
-PhysiCell and have compiled a sample model (rf. the [latest workshop slides](https://github.com/physicell-training/ws2023/blob/main/agenda.md)). (In the terminal command lines shown below, PhysiCell has been installed into a directory `~/PhysiCell`, but yours may be something different depending how you installed it). To download the Studio and have it be installed in its own
-directory inside the PhysiCell directory, click this link and download the `get_studio.py`:
+There are two ways to use PhysiCell Studio: desktop or Web-based (zero-install). We currently suggest using [Galaxy for the Web-based version](https://physicell-studio.readthedocs.io/en/latest/introduction.html#galaxy-tool-zero-install). Another Web-based option, although becoming less maintained, is [on nanoHUB](https://nanohub.org/tools/pcstudio). Both Galaxy and nanoHUB require registering for a free account.
+
+There are two primary workflows to run the desktop Studio:  1) standalone Studio, plus binary executable model(s), or 2) from a PhysiCell root directory where you have compiled an executable model from source. For the latter, we assume you have installed
+PhysiCell and have compiled a sample model (rf. the [2023 workshop slides](https://github.com/physicell-training/ws2023/blob/main/agenda.md) and the [training slides](https://physicell.org/Training.html#essentials)). 
+
+In the terminal command lines shown below, PhysiCell has been installed into a directory `~/PhysiCell`, but yours may be something different depending how you installed it. To download the Studio and have it be installed in its own
+directory inside the PhysiCell directory (or just as a standalone app), click this link and download the `get_studio.py`:
 
 * https://github.com/PhysiCell-Tools/PhysiCell-Studio/blob/main/get_studio.py 
 
@@ -42,7 +46,7 @@ Then run the script:
 ~/PhysiCell$ python get_studio.py
 ```
 
-It will download and install the latest version of the Studio into a directory called `studio` within your PhysiCell directory. The `get_studio.py` script will also print out sample commands for running the Studio, e.g.:
+It will download and install the latest version of the Studio into a directory called `studio`, e.g., within your PhysiCell directory or elsewhere. The `get_studio.py` script will also print out sample commands for running the Studio, e.g.:
 
 ```
 ~/PhysiCell$ python studio/bin/studio.py    # by default, try to load config/PhysiCell_settings.xml and use "project" as executable
