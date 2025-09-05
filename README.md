@@ -26,6 +26,11 @@ pip3 install -r requirements.txt
 ```
 This should install the additional Python modules necessary to run the Studio.
 
+We recommend the above instructions for installing Python and the additional modules needed for the Studio. However, as an alternative to installing Python from the Microsoft Store or [python.org](https://www.python.org/downloads), you can install the Anaconda or [Miniconda distribution](https://www.anaconda.com/docs/getting-started/miniconda/main). If you choose this option, you will want to run the following commands from the terminal before running the Studio:
+```
+conda env create -f environment.yml
+conda activate studio
+```
 ---
 ## Installing and Running
 
