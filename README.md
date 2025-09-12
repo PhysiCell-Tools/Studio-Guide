@@ -238,15 +238,14 @@ User parameters are general model parameters (as opposed to Cell Types | Custom 
 ---
 ## Rules
 
-  <img src="./images/rules_poster_demo.png" width="80%">
+  <img src="./images/hypoxia_rules.png" width="80%">
 
-This section is independent of the others in this guide in that it does not relate to the virus-macrophage sample project.
+This section is independent of the others in this guide in that it does not relate to the virus-macrophage sample project. Rather, it reflects the hypoxia model discussed at https://github.com/PhysiCell-Models/grammar_samples?tab=readme-ov-file#model-1-modeling-the-progression-of-hypoxia-in-a-metastatic-tumor-link .
 
-The Rules tab is a recent addition to the Studio and will continue to be improved in future releases. 
 The rules functionality in PhysiCell is both powerful and elegant. A rule, for a cell type, specifies how
 that cell will respond to a specific signal. In other words, rules will determine cell behaviors. The response
 is defined by a Hill function and its parameters are also specified in this tab, along with comboboxes that
-list the Signals and Behaviors. For an introductory tutorial on using rules, see https://github.com/physicell-training/nw2023. The screenshots shown here reflect that tutorial.
+list the Signals and Behaviors. For an introductory tutorial on using rules, see https://github.com/physicell-training/nw2023. Also refer to the [Cell paper (2025)](https://doi.org/10.1016/j.cell.2025.06.048).
 
   <img src="./images/rule_pressure_cycleentry_plot.png" width="50%">
 
