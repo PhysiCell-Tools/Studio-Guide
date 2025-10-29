@@ -214,7 +214,8 @@ this model:
   ### Custom Data
   <img src="./images/cell_customdata_virus.png" width="100%">
 
-   Define custom data parameters for this cell type.
+   Define custom data parameters for this cell type. If the "Conserve" attribute is toggled on, when a cell of that cell type divides, 
+   that custom data value will be divided equally into each daughter cell.
 
   ### Misc
   <img src="./images/cell_misc_param_distrib.png" width="100%">
